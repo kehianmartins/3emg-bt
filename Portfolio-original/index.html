@@ -52,28 +52,35 @@
             <!-- Sección Estudios -->
             <section id="estudios" class="seccion">
                 <h2>Estudios</h2>
-                <ul class="lista-estudios">
-                    <li>
-                        <h3>Ciclo Básico</h3>
-                        <div class="punto"></div><p>Ciclo público básico completo aprobado.</p>
-                    </li>
-                    <li>
-                        <h3>Bachillerato Tecnológico</h3>
-                        <div class="punto"></div><p>Cursando bachillerato tecnológico en Tecnologías de la Información.</p>
-                    </li>
-                </ul>
+                <div class="lista-estudios">
+                    <!-- Elementos para hacer la línea de tiempo-->
+                    <div class="linea"></div>
+                    <div class="col1 punto uno"></div>                    
+                    <div class="col1 punto dos"></div>
+                    
+                    <!-- Elementos dentro de la línea de tiempo-->
+                    <h3 class="col2">Ciclo Básico</h3>
+                    <p class="col2">Ciclo público básico completo aprobado.</p>
+                    <h3 class="col2">Bachillerato Tecnológico</h3>
+                    <p class="col2">Cursando bachillerato tecnológico en Tecnologías de la Información.</p>
+                </div>
             </section>
 
             <!-- Sección Proyectos -->
             <section id="proyectos" class="seccion">
                 <h2>Proyectos</h2>
-                <div class="grid-proyectos">
+                <div class="cont-proyectos">
                     <div class="proyecto">
                         <h3>Rincón de Franquía</h3>
                         <p>
-                            Un sitio web desarrollado como espacio de recomendaciones de franquicias de videojuegos y
-                            películas. Se trabajó con HTML, CSS y JavaScript.
+                            Un proyecto realizado en conjunto a varios compañeros para realizar una página web para el área protegida ubicada en Bella Unión, Artigas, llamada Rincón de Franquía. Se utilizaron tecnologías HTML y CSS.
                         </p>
+                        <div class="codigo">
+                            <a href="https://github.com/kehianmartins/rincon_de_franquia">
+                                <img src="img/github-mark.webp" alt="">
+                                <p>GitHub</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="proyecto">
                         <h3>Sistema de Riego Automático</h3>
@@ -81,25 +88,42 @@
                             Proyecto de automatización que utiliza sensores de humedad y Arduino para controlar el riego
                             de plantas. Se incluye documentación y simulación.
                         </p>
+                        <div class="codigo">
+                            <a href="https://github.com/kehianmartins/web_sist_riego">
+                                <img src="img/github-mark.webp" alt="">
+                                <p>GitHub</p>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Puedes agregar más proyectos acá -->
                 </div>
             </section>
 
             <!-- Sección Contacto -->
-            <section id="contacto" class="seccion">
+            <section id="contacto" class="seccion contacto">
                 <h2>Contacto</h2>
-                <p>¿Querés hablar conmigo? Podés escribirme a <a
-                        href="mailto:kehiandev@example.com">kehiandev@example.com</a> o encontrarme en mis redes
-                    sociales.</p>
-            </section>
-
+                <div class="cont-contacto">
+                    <div class="formulario">
+                    <form action="#" method="post">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Ingrese su email" id="email">
+                        <label for="razon">Razón</label>
+                        <input type="text" name="Razón" placeholder="Razón de contacto" id="razon">
+                        <label for="comentario">Email</label>
+                        <textarea name="comentario" placeholder="Ingrese su texto" id="comentario"></textarea>
+                        <button class= "send-button"type="submit" name="submit">Envíar</button>
+                    </form>
+                    <p>O bien puedes contactarme a <a href="mailto:kehianmartins2703@gmail.com">kehianmartins2703@gmail.com</a> o
+                        encontrarme en mis redes sociales.</p>
+                
+                    </div>
+                </div>
+                </section>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        &copy; 2025 Kehian Martins. Todos los derechos reservados.
+        &copy; 2025. Todos los derechos reservados.
     </footer>
     
 </body>
