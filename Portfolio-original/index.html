@@ -9,18 +9,28 @@
 </head>
 
 <body>
+
     <!-- Redes sociales -->
     <header>
         <div class="social-media">
-            <a href="https://www.instagram.com/kehianmartins_/profilecard/?igsh=MXRhbWo5dXE3YnQxYQ=="><img src="img/instagram.webp" alt="Instagram" /></a>
+            <a href="https://www.instagram.com/kehianmartins_/profilecard/?igsh=MXRhbWo5dXE3YnQxYQ=="><img
+                    src="img/instagram.webp" alt="Instagram" /></a>
             <a href="https://github.com/kehianmartins"><img src="img/github-mark.webp" alt="GitHub" /></a>
-            <a href="https://www.linkedin.com/in/kehian-martins-1617822ab/"><img src="img/linkedin.webp" alt="LinkedIn" /></a>
+            <a href="https://www.linkedin.com/in/kehian-martins-1617822ab/"><img src="img/linkedin.webp"
+                    alt="LinkedIn" /></a>
         </div>
     </header>
+
+    <!-- Checkbox para el menú desplegable -->
 
     <!-- Layout general -->
     <main>
         <!-- Menú lateral -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <aside>
             <nav class="menu">
                 <ul>
@@ -46,7 +56,7 @@
                     </p>
                 </div>
                 <img src="img/profile-picture.webp" alt="Foto de perfil" />
-            
+
             </section>
 
             <!-- Sección Estudios -->
@@ -55,9 +65,9 @@
                 <div class="lista-estudios">
                     <!-- Elementos para hacer la línea de tiempo-->
                     <div class="linea"></div>
-                    <div class="col1 punto uno"></div>                    
+                    <div class="col1 punto uno"></div>
                     <div class="col1 punto dos"></div>
-                    
+
                     <!-- Elementos dentro de la línea de tiempo-->
                     <h3 class="col2">Ciclo Básico</h3>
                     <p class="col2">Ciclo público básico completo aprobado.</p>
@@ -73,7 +83,9 @@
                     <div class="proyecto">
                         <h3>Rincón de Franquía</h3>
                         <p>
-                            Un proyecto realizado en conjunto a varios compañeros para realizar una página web para el área protegida ubicada en Bella Unión, Artigas, llamada Rincón de Franquía. Se utilizaron tecnologías HTML y CSS.
+                            Un proyecto realizado en conjunto a varios compañeros para realizar una página web para el
+                            área protegida ubicada en Bella Unión, Artigas, llamada Rincón de Franquía. Se utilizaron
+                            tecnologías HTML y CSS.
                         </p>
                         <div class="codigo">
                             <a href="https://github.com/kehianmartins/rincon_de_franquia">
@@ -103,21 +115,22 @@
                 <h2>Contacto</h2>
                 <div class="cont-contacto">
                     <div class="formulario">
-                    <form action="#" method="post">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Ingrese su email" id="email">
-                        <label for="razon">Razón</label>
-                        <input type="text" name="Razón" placeholder="Razón de contacto" id="razon">
-                        <label for="comentario">Email</label>
-                        <textarea name="comentario" placeholder="Ingrese su texto" id="comentario"></textarea>
-                        <button class= "send-button"type="submit" name="submit">Envíar</button>
-                    </form>
-                    <p>O bien puedes contactarme a <a href="mailto:kehianmartins2703@gmail.com">kehianmartins2703@gmail.com</a> o
-                        encontrarme en mis redes sociales.</p>
-                
+                        <form action="#" method="post">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Ingrese su email" id="email">
+                            <label for="razon">Razón</label>
+                            <input type="text" name="Razón" placeholder="Razón de contacto" id="razon">
+                            <label for="comentario">Email</label>
+                            <textarea name="comentario" placeholder="Ingrese su texto" id="comentario"></textarea>
+                            <button class="send-button" type="submit" name="submit">Envíar</button>
+                        </form>
+                        <p>O bien puedes contactarme a <a
+                                href="mailto:kehianmartins2703@gmail.com">kehianmartins2703@gmail.com</a> o
+                            encontrarme en mis redes sociales.</p>
+
                     </div>
                 </div>
-                </section>
+            </section>
         </div>
     </main>
 
@@ -125,7 +138,17 @@
     <footer>
         &copy; 2025. Todos los derechos reservados.
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const aside = document.querySelector('aside');
+        const main = document.querySelector('main');
     
+        menuToggle.addEventListener('click', () => {
+            aside.classList.toggle('open');
+            main.classList.toggle('open');
+        });
+    </script>
 </body>
 
 </html>

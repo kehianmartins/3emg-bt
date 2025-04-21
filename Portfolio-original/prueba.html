@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú con Checkbox</title>
+  <style>
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-label {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .menu-content {
+      display: none;
+      margin-top: 5px;
+    }
+
+    #menu-toggle:checked + .menu-label + .menu-content {
+      display: block;
+    }
+
+    .menu-content a {
+      display: block;
+      padding: 10px;
+      background-color: #f1f1f1;
+      text-decoration: none;
+      color: black;
+    }
+
+    .menu-content a:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle">
+  <label class="menu-label" for="menu-toggle">Menú</label>
+  <div class="menu-content">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </div>
+</body>
+</html>
