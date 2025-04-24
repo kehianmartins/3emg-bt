@@ -376,6 +376,8 @@ aside {
     font-weight: bold;
 }
 
+/* - - - Pie de Página - - - */
+
 footer {
     color: #ffffffb6;
     padding: 20px;
@@ -389,7 +391,7 @@ footer {
     display: none;
 }
 
-
+/* Animación de background para el Form*/
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -407,6 +409,13 @@ footer {
 /* Media Queries para responsive */
 @media (max-width: 780px) {
 
+    /* Contenido general*/
+    .contenido {
+        padding: 10px; 
+        padding-top: 40px;
+    }
+
+    /* Menú */
     .menu-toggle {
         display: inline-block;
         position: absolute;
@@ -448,7 +457,7 @@ footer {
         left: 0;
     }
     
-    /* Estilos para el contenido principal */
+    /* Contenido principal */
     main {
         transition: margin-left 0.3s ease;
     }
@@ -457,43 +466,49 @@ footer {
         grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
     }
 
+    /* Perfil*/
     .perfil {
         grid-template-columns: 1fr; /* Cambiar a una sola columna */
-        text-align: center; /* Centrar texto en pantallas pequeñas */
+        text-align: center; 
     }
 
     .perfil img {
         justify-self: center;
     }
 
+    .perfil .texto {
+        border-right: 4px solid #6f92ff; /* Se le agrega un borde al otro lado para mejorar la simetría*/
+        border-radius: 10px;
+    }
+
+    /* Formulario de Contacto */
+    .cont-contacto {
+        width: 90%;
+    }
+
+    .cont-contacto .formulario {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* Redes sociales*/
+    .social-media {
+        position: static; 
+    }
+
+    .social-media img {
+        height: 25px;/
+    }
+    
+    /* Cotenido general*/
     .contenido {
         padding: 10px; 
         padding-top: 40px;
     }
 
-    .cont-contacto {
-        width: 90%; /* Hacer el formulario más ancho en pantallas pequeñas */
-    }
-
-    .cont-contacto .formulario {
-        width: 95%; /* Hacer el formulario ocupar el 100% */
-    }
-
-    .social-media {
-        position: static; /* Cambiar a posición estática */
-    }
-
-    .social-media img {
-        height: 25px; /* Reducir el tamaño de los iconos */
-    }
-
-    .perfil .texto {
-        border-right: 4px solid #6f92ff;
-        border-radius: 10px;
-    }
-}
-
-@media (max-width: 1200px) {
+    /* Perfil */
     .perfil {
         grid-template-columns: 1fr;
         text-align: center;
@@ -502,27 +517,7 @@ footer {
     .perfil img {
         justify-self: center;
     }
-
-    .contenido {
-        padding: 10px; 
-        padding-top: 40px;
-    }
-
-    .cont-contacto {
-        width: 90%; 
-    }
-
-    .cont-contacto .formulario {
-        width: 95%; 
-    }
-
-    .social-media {
-        position: static; 
-    }
-
-    .social-media img {
-        height: 25px;/
-    }
+    
 
     .perfil .texto {
         border-right: 4px solid #6f92ff;
@@ -532,6 +527,16 @@ footer {
     .perfil h1 { 
         color: #6f92ff;
     }
+
+    /* Formulario de contacto*/
+    .cont-contacto {
+        width: 90%; 
+    }
+
+    .cont-contacto .formulario {
+        width: 95%; 
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -539,7 +544,7 @@ footer {
     h2 { font-size: 1.4rem; }
     h3 { font-size: 1rem; }
     .perfil img {
-        width: 120px; /* Reducir el tamaño de la imagen de perfil */
-        height: 120px; /* Reducir el tamaño de la imagen de perfil */
+        width: 120px;
+        height: 120px;
     }
 }
