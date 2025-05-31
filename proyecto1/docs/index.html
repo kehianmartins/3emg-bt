@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <div class="header__tittle">
+                <i class="material-icons">menu</i>
+                <h1>Dashboard E-commerce</h1>
+            </div>
+            <div class="header__user">
+                <div class="user__tittle">
+                    <h3>Usuario</h3>
+                    <i class="material-icons">arrow_left</i>
+                </div>
+                <ul class="user__submenu">
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="#">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <nav>
+            <h2 class="nav__tittle">
+                Dashboard
+            </h2>
+
+            <li class="nav__item">
+                <i class="material-icons">home</i>
+                Inicio
+            </li>
+            <li class="nav__item">
+                <i class="material-icons">person</i>
+                Usuarios
+            </li>
+            <li class="nav__item">
+                <i class="material-icons">interests</i>
+                Productos
+            </li>
+            <li class="nav__item">
+                <i class="material-icons">sell</i>
+                Ventas
+            </li>
+            <li class="nav__item">
+                <i class="material-icons">signal_cellular_alt</i>
+                Visitas
+            </li>
+            <li class="nav__item">
+                <i class="material-icons">manage_accounts</i>
+                Gestión
+            </li>
+        </nav>
+
+        <main>
+            <div class="main__cards">
+                <div class="cards__card">
+                    <h2 class="card__tittle">Usuarios</h2>
+                    <p class="card__amount">1.200</p>
+                </div>
+                <div class="cards__card">
+                    <h2 class="card__tittle">Productos</h2>
+                    <p class="card__amount">300</p>
+                </div>
+                <div class="cards__card">
+                    <h2 class="card__tittle">Ventas</h2>
+                    <p class="card__amount">1.150</p>
+                </div>
+                <div class="cards__card">
+                    <h2 class="card__tittle">Ingresos</h2>
+                    <p class="card__amount">77.500</p>
+                </div>
+            </div>
+
+            <div class="main__graphs --activo">
+                <div class="graps__graph">
+                    <h2 class="graphs__tittle">Ventas por día</h2>
+                </div>
+                <div class="graps__graph">
+                    <h2 class="graphs__tittle">Productos por Categoría</h2>
+                </div>
+            </div>
+
+            <div class="main__last-sells">
+                <h2 class="last-sells__title"></h2>
+                <table class="last-sells__table">
+                    <thead class="table__header">
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </thead>
+                    <tbody class="table__body">
+                        <tr class="table__body__row">
+                            <td>2024-04-09</td>
+                            <td>Cliente A</td>
+                            <td>Producto X</td>
+                            <td>1</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr class="table__body__row">
+                            <td>2024-04-08</td>
+                            <td>Cliente B</td>
+                            <td>Producto Y</td>
+                            <td>2</td>
+                            <td>$75.00</td>
+                        </tr>
+                        <tr class="table__body__row">
+                            <td>2024-04-07</td>
+                            <td>Cliente C</td>
+                            <td>Producto X</td>
+                            <td>1</td>
+                            <td>$50.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script>
+        const header__user = document.querySelector(".header__user");
+        const user__submenu = document.querySelector(".user__submenu");
+        const user__tittle__i = document.querySelector(".user__tittle i");
+
+        header__user.addEventListener("mouseenter", () => {
+
+            user__submenu.classList.toggle("open");
+
+            user__tittle__i.textContent = "arrow_drop_down";
+        })
+
+        header__user.addEventListener("mouseleave", () => {
+
+            user__submenu.classList.toggle("open");
+
+            user__tittle__i.textContent = "arrow_left";
+        })
+        </script>
+</body>
+
+</html>
