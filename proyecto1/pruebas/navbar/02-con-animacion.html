@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout con Menú Desplegable</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      min-height: 100vh;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar.hidden {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .content {
+      flex-grow: 1;
+      transition: margin-left 0.3s ease;
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #444;
+      color: white;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .toggle-btn {
+      margin: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+
+    .toggle-btn:hover i {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 999;
+        background-color: #3333339c;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+
+      .content.expanded {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav id="sidebar" class="sidebar hidden">
+      <p>Menú</p>
+      <ul>
+        <li><a href="#" style="color: white; text-decoration: none;">Inicio</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Servicios</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div id="content" class="content with-sidebar">
+      <header>
+        <button class="toggle-btn" onclick="toggleSidebar()">
+          <i class="material-icons">menu</i>
+        </button>
+        <h1>Encabezado</h1>
+      </header>
+      <main>
+        <p>Contenido principal de la página.</p>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const content = document.getElementById('content');
+      sidebar.classList.toggle('hidden');
+      content.classList.toggle('with-sidebar');
+    }
+  </script>
+</body>
+
+</html>
